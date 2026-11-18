@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "author": "Smart factory workshop (illustrative)",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "hx1",
+      "top": -140,
+      "left": 190,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rg",
+      "top": 150,
+      "left": 215,
+      "attrs": {
+        "value": "220"
+      },
+      "rotate": 90
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledg",
+      "top": 100,
+      "left": 275,
+      "attrs": {
+        "color": "green",
+        "label": "OK"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "ra",
+      "top": 150,
+      "left": 255,
+      "attrs": {
+        "value": "220"
+      },
+      "rotate": 90
+    },
+    {
+      "type": "wokwi-led",
+      "id": "leda",
+      "top": 100,
+      "left": 315,
+      "attrs": {
+        "color": "orange",
+        "label": "REORDER"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": 150,
+      "left": 295,
+      "attrs": {
+        "value": "220"
+      },
+      "rotate": 90
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledr",
+      "top": 100,
+      "left": 355,
+      "attrs": {
+        "color": "red",
+        "label": "CRITICAL"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz",
+      "top": 130,
+      "left": 395,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "hx1:VCC",
+      "esp:5V",
+      "red",
+      []
+    ],
+    [
+      "hx1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "hx1:DT",
+      "esp:16",
+      "green",
+      []
+    ],
+    [
+      "hx1:SCK",
+      "esp:17",
+      "orange",
+      []
+    ],
+    [
+      "esp:2",
+      "rg:1",
+      "green",
+      []
+    ],
+    [
+      "rg:2",
+      "ledg:A",
+      "green",
+      []
+    ],
+    [
+      "ledg:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:15",
+      "ra:1",
+      "orange",
+      []
+    ],
+    [
+      "ra:2",
+      "leda:A",
+      "orange",
+      []
+    ],
+    [
+      "leda:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:4",
+      "rr:1",
+      "red",
+      []
+    ],
+    [
+      "rr:2",
+      "ledr:A",
+      "red",
+      []
+    ],
+    [
+      "ledr:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "bz:2",
+      "esp:18",
+      "yellow",
+      []
+    ],
+    [
+      "bz:1",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

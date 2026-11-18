@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "author": "Smart factory workshop (illustrative)",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "bRun",
+      "top": -100,
+      "left": 220,
+      "attrs": {
+        "color": "green",
+        "label": "RUN/STOP"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "bGood",
+      "top": -20,
+      "left": 220,
+      "attrs": {
+        "color": "blue",
+        "label": "GOOD"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "bScrap",
+      "top": 60,
+      "left": 220,
+      "attrs": {
+        "color": "yellow",
+        "label": "FAIL"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rg",
+      "top": -60,
+      "left": 360,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledrun",
+      "top": -20,
+      "left": 360,
+      "attrs": {
+        "color": "green",
+        "label": "running"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": 40,
+      "left": 360,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledstop",
+      "top": 80,
+      "left": 360,
+      "attrs": {
+        "color": "red",
+        "label": "stopped"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "bRun:1.l",
+      "esp:13",
+      "green",
+      []
+    ],
+    [
+      "bRun:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "bGood:1.l",
+      "esp:33",
+      "blue",
+      []
+    ],
+    [
+      "bGood:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "bScrap:1.l",
+      "esp:14",
+      "yellow",
+      []
+    ],
+    [
+      "bScrap:2.l",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:2",
+      "rg:1",
+      "green",
+      []
+    ],
+    [
+      "rg:2",
+      "ledrun:A",
+      "green",
+      []
+    ],
+    [
+      "ledrun:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:4",
+      "rr:1",
+      "red",
+      []
+    ],
+    [
+      "rr:2",
+      "ledstop:A",
+      "red",
+      []
+    ],
+    [
+      "ledstop:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
