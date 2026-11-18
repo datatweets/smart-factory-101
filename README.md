@@ -9,7 +9,6 @@ Hands-on introduction to **Industry 4.0 smart manufacturing**: a slide deck, thr
 | [`slides/`](slides) | The full course deck as a PDF (eight modules, 33 topics) |
 | [`handouts/`](handouts) | Three one-page exercises: score a process, draw the path of one scan, build a 90-day plan and a quick ROI |
 | [`labs/`](labs) | Five ESP32 simulations for [Wokwi](https://wokwi.com), each with code, wiring, a README and a step-by-step PDF guide |
-| [`credits/`](credits) | Source, author and licence of every photograph in the slides |
 
 ## The five labs
 
@@ -34,4 +33,4 @@ The labs use invented numbers and simple threshold rules. They are teaching mode
 ## Licences
 
 - Code in `labs/`: MIT (see `LICENSE`). Labs 1 to 3 are adapted from the MIT-licensed *intro-to-iot-workshop* labs by DATATWEETS.
-- Slides, handouts and guides: CC BY-SA 4.0. Photographs in the slides come from Wikimedia Commons under their own open licences, credited on each slide and in `credits/Photo-Register.csv`.
+- Slides, handouts and guides: CC BY-SA 4.0. Photographs in the slides come from Wikimedia Commons under their own open licences, credited on the slides.
